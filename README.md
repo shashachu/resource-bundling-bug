@@ -3,7 +3,7 @@ Demo project demonstrating a bug where layout files will not be seen as inputs t
 ## Repro
 1. Install the app using `./gradlew installDebug` and launch it. Note the background of the activity is purple.
 2. Change the background color of the activity to something else.
-3. Re-build and install using `./gradlew installDebug` and note the background is still purple. (You may have to retry steps 1-3)
+3. Re-build and install using `./gradlew installDebug` and note the background is still purple.
 4. Run `./gradlew clean installDebug` and note the background is still purple.
 
 Commenting out the `srcDirs` block in `app/build.gradle` will fix the issue.
