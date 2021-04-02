@@ -4,13 +4,11 @@ Demo project demonstrating a bug where layout files will not be seen as inputs t
 1. Install the app using `./gradlew installDebug` and launch it. Note the background of the activity is purple.
 2. Change the background color of the activity to something else.
 3. Re-build and install using `./gradlew installDebug` and note the background is still purple.
-4. Run `./gradlew clean installDebug` and note the background is still purple.
 
 Commenting out the `srcDirs` block in `app/build.gradle` will fix the issue.
 
 ## Other info
 * If you run `./gradlew clean installDebug` between layout changes, it will work
-* Once you are in a state where the layout changes have not been picked up, even clean builds will not work until you change somethign in the layout file.
 
 ## Log output
 The `:app:mergeDebugResources` task does recognize that the layout file has changed:
